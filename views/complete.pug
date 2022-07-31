@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    link(href='/css/index.css', rel='stylesheet')
+  body    
+    .all-wrapper
+      .content-header
+        .logo-div 
+          a.logo(href='/') Challenge App
+        .header-button.button 
+          a.button(href='/auth/login') Login
+        .header-button.button 
+          a.button(href='/auth/register') Register
+      .content-auth   
+        form.complete-screen(method='POST' action='/auth/complete')
+          .title-text Please provide more information to continue 
+          input.entry(placeholder='Name' name='name' required autocomplete='off' autofocus)
+          input.entry(placeholder='Surname' name='surname' autocomplete='off' required)
+          input.entry(placeholder='Birthday (YYYY/MM/DD)' name='bday' autocomplete='off' required)
+          button.submitButton Login
+            
+

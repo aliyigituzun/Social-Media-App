@@ -1,0 +1,55 @@
+.user-list {
+    height: 100%;
+    width: 75%;
+    padding: 20px 20px 20px 20px;
+}
+.user-list-item {
+    height: 110px;
+    width: calc(100% - 60px);
+    background-color: #3a4d65;
+    border: 1px solid rgb(1, 1, 1);
+    border-radius: 30px;
+    display: flex;
+}
+
+.user-name-space {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-name {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.description-space {
+    height: 100%;
+    width: 60%;
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.options-space {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.send-friend {
+    height: 30%;
+    min-width: 100px;
+    border: 1px solid rgb(97, 174, 3);
+    background-color: rgb(127, 230, 1);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

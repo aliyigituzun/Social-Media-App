@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    link(href='/css/index.css', rel='stylesheet')
+  body    
+    .all-wrapper
+      .content-header
+        .logo-div 
+          a.logo(href='/') Challenge App
+        .header-button.button 
+          a.button(href='/auth/login') Login
+        .header-button.button 
+          a.button(href='/auth/register') Register
+      .content-auth
+        form.login-screen(method='POST' action='/auth/login')
+          .title-text.entry Login
+          input.entry(placeholder='Email' type='email' name='email' required autocomplete='off' autofocus)
+          input.entry(placeholder='Password' type='password' name='password' autocomplete='off' required)
+          button.submitButton Login
+          .entry 
+            a.register-link(href='/auth/register') Don't have an account? Register instead.
+          
+          
+          
