@@ -4,8 +4,9 @@ const User = require('../../models/userModel.js');
 
 module.exports = (req, res) => {
   if (!req.body || !req.body.name || !req.body.surname || !req.body.bday) {
-    
+    console.log("got an error")
     req.session.error = 'Please enter all the necessary information';
+    
     return res.redirect('/auth/complete');
   }
    
@@ -21,6 +22,8 @@ module.exports = (req, res) => {
     }
      
     req.session.user = user;
+
+    res.redirect('/stream')
     
   });
 }

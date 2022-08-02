@@ -22,11 +22,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const session = expressSession({
-    secret: process.env.secret,
+    secret: "anything",
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false }
   });
+
+  
 
 
 app.use(session);

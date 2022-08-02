@@ -1,15 +1,16 @@
 window.addEventListener('load', () => {
-    const url = "http://localhost:3000/stream/requests"
+
+    const url = "http://localhost:3000/stream/accept"
+
     
-    fetch('/stream/users_raw').then((response) => {
+    fetch('/stream/inbox_raw').then((response) => {
+        
         response.json().then((data) => {
             console.log(data)
             console.log(Object.keys(data).length)
-            for(var i = 0; Object.keys(data).length - 1 > i ; i++){
-                    if(data[i]._id === data[Object.keys(data).length - 1]){
+            for(var i = 0; Object.keys(data).length > i ; i++){
 
-                    }
-            else    {
+            
                 const list = document.querySelector('.user-list');
 
                 const newListItem = document.createElement('div')
@@ -19,14 +20,14 @@ window.addEventListener('load', () => {
 
                 const newDescription = document.createElement('div')
                 const newOptions = document.createElement('div')
-                const addFriend = document.createElement('div')
+                const acceptFriend = document.createElement('div')
 
                 newListItem.classList.add('user-list-item')
                 newNameField.classList.add('user-name-space')
                 newName.classList.add('user-name')
 
                 newOptions.classList.add('options-space')
-                addFriend.classList.add('send-friend')
+                acceptFriend.classList.add('send-friend')
                 newDescription.classList.add('description-space')
 
                 list.appendChild(newListItem)
@@ -36,21 +37,20 @@ window.addEventListener('load', () => {
 
                 newNameField.appendChild(newName)
 
-                newOptions.appendChild(addFriend)
+                newOptions.appendChild(acceptFriend)
 
-                newName.textContent = data[i].name
-                addFriend.id = data[i]._id
-                addFriend.textContent = "Add Friend"
-
-
-                }
-                
-            }
-        })
+                newName.textContent = data[i][i].name
+                acceptFriend.id = data[i][i]._id
+                acceptFriend.textContent = "Accept Request"
+        }
 
     })
-    
-    const xhr = new XMLHttpRequest();
+
+
+
+})
+
+const xhr = new XMLHttpRequest();
 
     document.addEventListener('click', async event => {
         if (event.target.classList.contains('send-friend') || event.target.parentNode.classList.contains('send-friend')) {
@@ -69,5 +69,5 @@ window.addEventListener('load', () => {
             
     }})
 
-})
 
+})

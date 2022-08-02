@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
 const User = require('../../models/userModel')
 
-const postFriendRequest = (req, res) => {
+const postFriendAccept = (req, res) => {
 
-    const requestData = req.body.data
-    const pendingData = req.session.user._id
-    console.log(requestData)
+    const acceptData = req.body.data
+
+    
     if(req.body.data != req.session.user._id){
         User.findByIdAndUpdate(mongoose.Types.ObjectId(req.session.user._id),{$push: {
-            requests : [
+            friends : [
               {
-                sentRequest : requestData
+                friend : acceptData
               }
             ]
           }},{new: true}, (err, user) => {
@@ -20,8 +20,8 @@ const postFriendRequest = (req, res) => {
               }
           })
           User.findByIdAndUpdate(mongoose.Types.ObjectId(req.body.data),{$push: {
-            pending : [ {
-              pendingRequest : pendingData
+            friends : [ {
+              friend : req.session.user._id
             }
             ]
           }},{new: true}, (err, user) => {
@@ -37,4 +37,4 @@ const postFriendRequest = (req, res) => {
 
 }
 
-module.exports = postFriendRequest;
+module.exports = postFriendAccept;

@@ -27,8 +27,15 @@ router.get('/complete',
     completeGetController
     );
 router.post('/complete',
+    
     completePostController
     );
+router.get('/logout',
+    loginGetController,
+    completePostController
+    );
+
+
 
 
 

@@ -11,6 +11,10 @@ module.exports = (req, res) => {
               }
               
               req.session.user = user;
+              
+              if(req.session.user.completed){
+                return res.redirect('/stream')
+            }
               res.redirect('/auth/complete')
               
           })
