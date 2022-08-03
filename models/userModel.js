@@ -117,7 +117,7 @@ UserSchema.statics.completeUpdate = function (id, name, surname, bday, callback)
 
 UserSchema.statics.findPending = async function (pending, arrayLength, callback) {
 
-    const friends = []
+    const requests = []
     
 
     if (pending.length === 0){
@@ -125,7 +125,28 @@ UserSchema.statics.findPending = async function (pending, arrayLength, callback)
     }
     for(let i = 0; arrayLength > i; i++){
         
-        const friend = await User.findById(pending[i].pendingRequest)
+        const request = await User.findById(pending[i].pendingRequest)
+        requests.push(request)
+        
+        
+    }
+
+    callback(null, requests)
+
+    
+}
+
+UserSchema.statics.findFriends = async function (friendList, arrayLength, callback) {
+
+    const friends = []
+    
+
+    if (friendList.length === 0){
+        return callback(null, false)
+    }
+    for(let i = 0; arrayLength > i; i++){
+        
+        const friend = await User.findById(friendList[i].friend)
         friends.push(friend)
         
         

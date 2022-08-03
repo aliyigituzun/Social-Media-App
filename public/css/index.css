@@ -3,63 +3,63 @@
     font-family: Arial, Helvetica, sans-serif;
   }
   
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #303841;
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #303841;
   }
-  .all-wrapper   {
-    width: 100%;
-    height: 100%;
-    background-color: #303841;
-    display: flex;
-    flex-direction: column;
+.all-wrapper   {
+  width: 100%;
+  height: 100%;
+  background-color: #303841;
+  display: flex;
+  flex-direction: column;
   }
-  .content-header   {
-    background-color: #3a4d65;
-    height: 8%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-bottom: 40px;
+.content-header   {
+  background-color: #3a4d65;
+  height: 8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 40px;
   }
-    .logo-div {
-      min-width: 72%;
-      padding-top: 4px;
-      padding-left: 20px;
+.logo-div {
+  min-width: 72%;
+  padding-top: 4px;
+  padding-left: 20px;
       
-    }
-    .logo-div-logged {
-      min-width: 44%;
-      padding-top: 4px;
-      padding-left: 20px;
-    }
-    .logo {
-      font-size: 40px;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      text-decoration: none;
-      color: inherit;
-    }
-    .header-button  {
-      height: 100%;
-      width: 14%;
-      font-size: 24px;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      padding-top: 14px;
-      text-align: center;
-    }
-    .button:hover {
-      background-color: #4a617e;
-    }
-    .button{
-      font-size: 24px;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      text-decoration: none;
-      color: inherit;
-    }
-  .post {
+  }
+.logo-div-logged {
+  min-width: 44%;
+  padding-top: 4px;
+  padding-left: 20px;
+  }
+.logo {
+  font-size: 40px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration: none;
+  color: inherit;
+  }
+.header-button  {
+  height: 100%;
+  width: 14%;
+  font-size: 24px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-top: 14px;
+  text-align: center;
+  }
+.button:hover {
+    background-color: #4a617e;
+  }
+.button{
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: inherit;
+}
+.post {
     width: 600px;
     height: 500px;
     display: flex;
@@ -69,7 +69,7 @@
     border-style: solid;
     border-width: 1px;
   }
-  .post-alt {
+.post-alt {
     display: flex;
     flex-direction: row !important;
     flex-wrap: wrap;
@@ -77,45 +77,45 @@
     align-content: flex-start
 
   }
-  a.post-alt-text{
+a.post-alt-text{
     text-decoration: none;
     color: inherit;
     font-size: 30px;
     height: 50px;
     color: #4481cb;
   }
-  span.post-alt-text  {
+span.post-alt-text  {
     text-decoration: none;
     color: inherit;
     font-size: 30px;
     height: 50px;
     
   }
-  .post-wrapper {
+.post-wrapper {
     height: 100%;
     width: 60%;
     
   }
-  .friends-list {
+.friends-list {
     height: 100%;
     width: 25%;
     
   }
-  .content-auth{ 
+.content-auth{ 
     display: flex;
     justify-content: center;
   }
-  .content-index {
+.content-index {
     height: 100%;
     display: flex;
     justify-content: center;
   }
-  .content {
+.content {
     height: 100%;
     display: flex;
     justify-content: flex-end;
   }
-  .login-screen {
+.login-screen {
     height: 350px;
     width: 400px;
     display: flex;
@@ -126,7 +126,7 @@
     border-style: solid;
     border-width: 1px;
   }
-  .complete-screen  {
+.complete-screen  {
     padding-top: 40px;
     height: 400px;
     width: 500px;
@@ -138,20 +138,20 @@
     border-style: solid;
     border-width: 1px;
   }
-  .title-text {
+.title-text {
     font-size: 28px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     
   }
-  .entry {
+.entry {
     width: calc(100% - 120px);
     height: 30px;
     margin-left: 57px;
     margin-top: 30px;
     
   }
-  .submitButton {
+.submitButton {
     width: calc(100% - 240px);
     height: 30px;
     margin-left: 117px;
@@ -162,7 +162,7 @@
     border-radius: 3px;
 
   }
-  .register-link {
+.register-link {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
     text-decoration: none;

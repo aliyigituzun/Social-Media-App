@@ -39,8 +39,8 @@ window.addEventListener('load', () => {
 
                 newOptions.appendChild(deleteFriend)
 
-                newName.textContent = data[0][i].name
-                deleteFriend.id = data[0][i]._id
+                newName.textContent = data[i].name
+                deleteFriend.id = data[i]._id
                 deleteFriend.textContent = "Delete Friend"
                 
             }
