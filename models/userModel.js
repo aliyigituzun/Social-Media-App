@@ -4,8 +4,6 @@ const verifyPassword = require('./functions/verifyPassword');
 const hashPassword = require('./functions/hashedPassword');
 
 
-
-
 const UserSchema = new mongoose.Schema({
     username:   {
         type: String,
@@ -79,6 +77,68 @@ UserSchema.statics.findUser = function (email, password, callback) {
       });
     });
   };
+
+UserSchema.statics.getAllUsers = function (callback) {
+    let User = this 
+
+    const users = User.find({}, (err, users) => {
+        if(err || !users){
+            console.log(err)
+            return callback(true)
+        }
+        callback(null, users)
+    })
+
+    
+    
+    
+}
+
+UserSchema.statics.completeUpdate = function (id, name, surname, bday, callback) {
+
+    
+   
+    User.findByIdAndUpdate(mongoose.Types.ObjectId(id), {$set: {
+        name,
+        surname,
+        bday,
+        completed: true
+      }}, {new: true}, (err, user) => {
+        if (err || !user) {
+          console.log("bruh + " + user)
+          return callback(true);
+        }
+    
+        callback(null, user)
+        
+      });
+    
+}
+
+UserSchema.statics.findPending = async function (pending, arrayLength, callback) {
+
+    const friends = []
+    
+
+    if (pending.length === 0){
+        return callback(null, false)
+    }
+    for(let i = 0; arrayLength > i; i++){
+        
+        const friend = await User.findById(pending[i].pendingRequest)
+        friends.push(friend)
+        
+        
+    }
+
+    callback(null, friends)
+
+    
+}
+
+
+
+
 
 
 

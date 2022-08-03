@@ -4,6 +4,7 @@ module.exports = (req, res) => {
             req.session.error = 'Please enter all the necessary information';
             return res.redirect('/auth/login');
           }
+          
           const user = User.findUser(req.body.email, req.body.password, (err, user) => {
             if(err){return console.log(err)}
             if(!user){

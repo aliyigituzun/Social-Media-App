@@ -3,18 +3,18 @@ const router = express.Router();
 
 const isLogin = require('../middleware/isLoggedIn.js')
 
-const streamGetController = require('../controllers/stream/streamGet.js')
+const streamGetController = require('../controllers/stream/index/streamGet.js')
 
-const usersGetController = require('../controllers/stream/usersGet.js')
-const usersRawGetController = require('../controllers/stream/usersRawGet.js')
-const friendRequestPostController = require('../controllers/stream/requestPost.js')
-const friendAcceptPostController = require('../controllers/stream/accept.js')
+const usersGetController = require('../controllers/stream/users/usersGet.js')
+const usersRawGetController = require('../controllers/stream/users/usersRawGet.js')
+const friendRequestPostController = require('../controllers/stream/request/requestPost.js')
+const friendAcceptPostController = require('../controllers/stream/request/accept.js')
 
-const friendsGetController = require('../controllers/stream/friendsGet.js')
-const friendsRawGetController = require('../controllers/stream/friendsRawGet.js')
+const friendsGetController = require('../controllers/stream/friends/friendsGet.js')
+const friendsRawGetController = require('../controllers/stream/friends/friendsRawGet.js')
 
-const inboxGetController = require('../controllers/stream/inboxGet.js')
-const inboxRawGetController = require('../controllers/stream/inboxRawGet.js')
+const inboxGetController = require('../controllers/stream/inbox/inboxGet.js')
+const inboxRawGetController = require('../controllers/stream/inbox/inboxRawGet.js')
 
 const notFoundGetController = require('../controllers/index/404Get.js')
 

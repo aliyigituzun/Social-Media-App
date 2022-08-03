@@ -10,20 +10,14 @@ module.exports = (req, res) => {
     return res.redirect('/auth/complete');
   }
    
-  User.findByIdAndUpdate(mongoose.Types.ObjectId(req.session.user._id), {$set: {
-    name: req.body.name,
-    surname: req.body.phone,
-    bday: req.body.bday.toLowerCase(),
-    completed: true
-  }}, {new: true}, (err, user) => {
-    if (err || !user) {
-      console.log(err)
-      return res.redirect('/auth/complete');
+  User.completeUpdate(req.session.user._id ,req.body.name, req.body.surname, req.body.bday, (err, user) => {
+    if(err){
+      res.redirect('/auth/complete')
     }
-     
-    req.session.user = user;
-
-    res.redirect('/stream')
-    
-  });
+    if(user){
+      req.session.user = user
+      res.redirect('/stream')
+    }
+  })
+  
 }

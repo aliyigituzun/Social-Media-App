@@ -39,8 +39,8 @@ window.addEventListener('load', () => {
 
                 newOptions.appendChild(acceptFriend)
 
-                newName.textContent = data[i][i].name
-                acceptFriend.id = data[i][i]._id
+                newName.textContent = data[i].name
+                acceptFriend.id = data[i]._id
                 acceptFriend.textContent = "Accept Request"
         }
 
