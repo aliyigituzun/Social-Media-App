@@ -1,7 +1,6 @@
 {
   "name": "social-media",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +15,15 @@
     "mongoose": "^6.4.7",
     "pug": "^3.0.2",
     "serve-favicon": "^2.5.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodingSodaGuy/Social-Media-App.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/CodingSodaGuy/Social-Media-App/issues"
+  },
+  "homepage": "https://github.com/CodingSodaGuy/Social-Media-App#readme",
+  "description": ""
 }
