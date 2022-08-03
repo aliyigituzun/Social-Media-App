@@ -1,5 +1,5 @@
 const getUsers = (req, res) => {
-    return res.render('users.pug')
+    return res.render('stream/users.pug')
 }
 
 module.exports = getUsers;

@@ -16,7 +16,7 @@ const friendsRawGetController = require('../controllers/stream/friendsRawGet.js'
 const inboxGetController = require('../controllers/stream/inboxGet.js')
 const inboxRawGetController = require('../controllers/stream/inboxRawGet.js')
 
-const notFoundGetController = require('../controllers/404Get.js')
+const notFoundGetController = require('../controllers/index/404Get.js')
 
 
 

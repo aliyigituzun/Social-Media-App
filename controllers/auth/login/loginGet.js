@@ -1,5 +1,5 @@
 const getLogin = (req, res) => {
-    return res.render('login.pug')
+    return res.render('auth/login.pug')
 }
 
 module.exports = getLogin;

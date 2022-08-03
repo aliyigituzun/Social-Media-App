@@ -71,7 +71,7 @@ UserSchema.statics.findUser = function (email, password, callback) {
   
       verifyPassword(password.toString(), user.password.toString(), (res) => {
         if (res){
-            console.log("res= " +  res)
+            
             return callback(null, user);
         } 
         

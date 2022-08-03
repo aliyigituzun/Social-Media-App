@@ -1,5 +1,5 @@
 const getRegister = (req, res) => {
-    return res.render('register.pug')
+    return res.render('auth/register.pug')
 }
 
 module.exports = getRegister;

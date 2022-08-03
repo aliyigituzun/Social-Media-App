@@ -1,4 +1,4 @@
-const User = require('../../models/userModel')
+const User = require('../../../models/userModel')
 module.exports = (req, res) => {
         if (!req.body || !req.body.email || !req.body.password) {
             req.session.error = 'Please enter all the necessary information';

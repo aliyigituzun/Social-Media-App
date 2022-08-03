@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const User = require('../../models/userModel.js');
+const User = require('../../../models/userModel.js');
 
 module.exports = (req, res) => {
   if (!req.body || !req.body.name || !req.body.surname || !req.body.bday) {

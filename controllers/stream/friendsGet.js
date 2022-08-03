@@ -1,6 +1,6 @@
 const getFriends = (req, res) => {
 
-    return res.render('friends.pug')
+    return res.render('stream/friends.pug')
 }
 
 module.exports = getFriends;

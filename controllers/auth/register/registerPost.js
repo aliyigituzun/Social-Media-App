@@ -1,5 +1,5 @@
 const { default: mongoose } = require('mongoose');
-const User = require('../../models/userModel')
+const User = require('../../../models/userModel')
 
 module.exports = (req, res) => {
     if (!req.body || !req.body.email || !req.body.password) {

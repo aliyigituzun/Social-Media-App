@@ -1,6 +1,6 @@
 const getComplete = (req, res) => {
     
-    return res.render('complete.pug')
+    return res.render('auth/complete.pug')
 
 }
 
