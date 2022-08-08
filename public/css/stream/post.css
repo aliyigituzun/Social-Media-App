@@ -1,0 +1,20 @@
+.post-screen {
+    height: calc(100% - 40px);
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    background-color: inherit;
+}
+.content-area {
+    height: 300px !important;
+}
+
+.description-text {
+    padding: 20px 20px 20px 20px;
+    font-size: 25px;
+    
+}
+
+.stream-post {
+    padding: 20px 20px 20px 20px
+}

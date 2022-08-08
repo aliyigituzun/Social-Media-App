@@ -4,7 +4,7 @@ html
     link(href='/css/index.css', rel='stylesheet')
     link(href='/css/stream/stream.css', rel='stylesheet')
     link(href='/css/stream/post.css', rel='stylesheet')
-    script(src='/js/stream.js')
+
   body    
     .all-wrapper
       .content-header
@@ -18,12 +18,15 @@ html
           a.button(href='/stream/users') Users
         .header-button.button 
           a.button(href='/auth/logout') Logout
-      .content
-        .post-wrapper
-          .new-post
-            .new-post-button
-            .new-post-text
+      .content-index
+        .post.post-alt
+          form.post-screen(method='POST' action='/stream/post')
+            span.title-text Submit Post
+            input.entry(name='title' placeholder='Enter title' required autocomplete='off' )
+            textarea.entry.content-area(name='content' placeholder='Enter content', resize: none)
+            button.submitButton Submit Post
+
+            
            
            
         .friends-list
-

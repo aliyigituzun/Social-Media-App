@@ -26,7 +26,6 @@
     color: inherit;
 }
 
-
 .description-space {
     height: 100%;
     width: 60%;
@@ -52,4 +51,24 @@
     justify-content: center;
     align-items: center;
 
+}
+
+.new-post {
+    padding: 20px 20px 20px 20px;
+    height: 100px;
+    width: 35%;
+    background-color: #3a4d65;
+    border: 1px solid rgb(1, 1, 1);
+    border-radius: 30px;
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.new-post-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid rgb(97, 174, 3);
+    background-color: rgb(127, 230, 1);
 }

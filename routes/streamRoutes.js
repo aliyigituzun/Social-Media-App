@@ -16,6 +16,10 @@ const friendsRawGetController = require('../controllers/stream/friends/friendsRa
 const inboxGetController = require('../controllers/stream/inbox/inboxGet.js')
 const inboxRawGetController = require('../controllers/stream/inbox/inboxRawGet.js')
 
+const postRenderController = require('../controllers/stream/posts/get.js')
+const postInfoPostController = require('../controllers/stream/posts/post.js')
+const postsRawGetController = require('../controllers/stream/index/postsRawGet.js')
+
 const notFoundGetController = require('../controllers/index/404Get.js')
 
 
@@ -66,6 +70,21 @@ router.post('/accept',
      isLogin,
      friendRequestPostController
      )
+
+router.get('/post',
+    isLogin,
+    postRenderController
+    )
+
+router.post('/post',
+    isLogin,
+    postInfoPostController
+    )
+
+router.get('/post-raw',
+    isLogin,
+    postsRawGetController
+    )
 
 router.get('/*',
     isLogin,

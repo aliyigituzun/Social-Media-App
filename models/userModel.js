@@ -39,17 +39,22 @@ const UserSchema = new mongoose.Schema({
     },
     friends:   [{
         friend:    {
-            type: String
+            type: mongoose.Schema.Types.ObjectId
         }
     }],
     requests:   [{
         sentRequest:    {
-            type: String
+            type: mongoose.Schema.Types.ObjectId
         }
     }],
     pending:   [{
         pendingRequest:    {
-            type: String
+            type: mongoose.Schema.Types.ObjectId
+        }
+    }],
+    posts:  [{
+        post:  {
+            type: mongoose.Schema.Types.ObjectId
         }
     }],
     
