@@ -4,9 +4,12 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const favicon = require('serve-favicon');
 const expressSession = require('express-session')
+const dotenv = require('dotenv')
+
+dotenv.config()
 
 const app = express();
-const port = 3000;
+const port = 3000 || process.env.port;
 
 const indexRouteController = require('./routes/indexRoutes.js')
 const authRouteController = require('./routes/authRoutes.js')
@@ -22,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const session = expressSession({
-    secret: "anything",
+    secret: process.env.secret,
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false }
