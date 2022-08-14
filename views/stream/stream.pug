@@ -22,8 +22,13 @@ html
         .post-wrapper
           .new-post
             .new-post-button
-            .new-post-text
-           
-           
+            .new-post-text  
         .friends-list
+          .profile
+            .profile-pic-zone
+              .profile-pic 
+              form(method='POST' action='/stream/image' enctype='multipart/form-data')
+                input.photo(type='file' name='file' required)
+                button.picture-save Save
+          .profile-description
 

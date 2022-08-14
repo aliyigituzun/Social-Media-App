@@ -57,6 +57,9 @@ const UserSchema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId
         }
     }],
+    photo:  {
+        type: String
+    }
     
     
 
@@ -102,7 +105,6 @@ UserSchema.statics.getAllUsers = function (callback) {
 UserSchema.statics.completeUpdate = function (id, name, surname, bday, callback) {
 
     
-   
     User.findByIdAndUpdate(mongoose.Types.ObjectId(id), {$set: {
         name,
         surname,
@@ -110,7 +112,7 @@ UserSchema.statics.completeUpdate = function (id, name, surname, bday, callback)
         completed: true
       }}, {new: true}, (err, user) => {
         if (err || !user) {
-          console.log("bruh + " + user)
+          console.log(user)
           return callback(true);
         }
     
@@ -161,11 +163,6 @@ UserSchema.statics.findFriends = async function (friendList, arrayLength, callba
 
     
 }
-
-
-
-
-
 
 
 

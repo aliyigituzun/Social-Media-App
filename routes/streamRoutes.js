@@ -1,5 +1,8 @@
 const express = require('express')
 const router = express.Router();
+const multer = require('multer')
+
+const upload = multer({dest: './images/'})
 
 const isLogin = require('../middleware/isLoggedIn.js')
 
@@ -20,9 +23,8 @@ const postRenderController = require('../controllers/stream/posts/get.js')
 const postInfoPostController = require('../controllers/stream/posts/post.js')
 const postsRawGetController = require('../controllers/stream/index/postsRawGet.js')
 
-const notFoundGetController = require('../controllers/index/404Get.js')
-
-
+const notFoundGetController = require('../controllers/index/404Get.js');
+const imagePostController = require('../controllers/stream/images/post.js')
 
 
 router.get('/',
@@ -86,10 +88,17 @@ router.get('/post-raw',
     postsRawGetController
     )
 
+router.post('/image',
+    upload.single('file'),
+    isLogin,
+    imagePostController
+    )
+
 router.get('/*',
     isLogin,
-    notFoundGetController
+    friendRequestPostController
     );
+
 
 
 

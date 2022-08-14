@@ -20,8 +20,8 @@ window.addEventListener('load', () => {
                 title.classList.add('title-text')
                 
 
-                title.textContent = data[0][i].title
-                description.textContent = data[0][i].description
+                title.textContent = data[i][0].title
+                description.textContent = data[i][0].description
                 
                 content.appendChild(post)
                 post.appendChild(title)

@@ -6,7 +6,7 @@ const favicon = require('serve-favicon');
 const expressSession = require('express-session')
 const dotenv = require('dotenv')
 
-dotenv.config()
+dotenv.config({path: path.join(__dirname, 'config/.env')})
 
 const app = express();
 const port = 3000 || process.env.port;
